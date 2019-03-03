@@ -1,0 +1,21 @@
+<div class="w3-container w3-input w3-light-grey w3-padding w3-row">
+    <div class="w3-container w3-quarter">
+        <a href="{{ site.url }}">
+            <div class="w3-col s4">
+                <h3><img src="https://i.ibb.co/NtVXKBQ/logo.png" style="width:30%"></h3>
+            </div>
+            <div class=" w3-container w3-hide-small w3-col s8">
+                <h3>{{ site.title }}</h3>
+            </div>
+        </a>
+    </div>
+    <div class=" w3-right">
+        <div class="w3-container w3-padding ">
+            {% for menu in site.pages %}
+                {% if menu.jenis == "menu" %}
+                    <span class="w3-text-blue">| <a href="{{ menu.url }}">{{ menu.title }} </a></span>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

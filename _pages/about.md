@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+jenis: menu
 permalink: /about/
 ---
 

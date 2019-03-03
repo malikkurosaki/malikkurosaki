@@ -1,0 +1,84 @@
+---
+layout: wraper
+---
+
+       
+
+
+<div class="w3-container">
+  <div class="w3-container w3-input w3-deep-orange" style="height:300px;display:flex;align-items: center;justify-content: center">
+      <div class="w3-container">
+        <div >
+          <h1 style="margin:0 auto;text-align:center">Malik Kurosaki Studio</h1>
+        </div>
+        <div style="text-align:center">
+            Web And Android Aplication
+        </div>
+      </div>
+  </div>
+
+  {% for ps in site.posts %}
+    {% if ps.jenis == "penting" %}
+        <div class="w3-container w3-row w3-padding">
+            <div class="w3-col s8">
+                <a href="{{ ps.url }}"><img src="{{ ps.gambar }}" style="width:100%" alt="malik kurosaki {{ ps.title }}"></a>
+            </div>
+            <div class="w3-col s4 w3-hide-small" style="padding-left:8px;position: static" >
+                <a href="{{ ps.url }}"><strong><div class="w3-border-bottom w3-xlarge" style="height:40%;overflow:hidden;position: relative;">{{ ps.title }}</div></strong></a>
+                <div class="" style="height:60%;overflow:hidden;position: relative;">{{ ps.keterangan }}</div>
+            </div>
+            <div class="w3-col s4 w3-hide-large" style="padding-left:8px;position: static" >
+                <a href="{{ ps.url }}"><strong class="w3-border-bottom " style="height:40%;overflow:hidden;position: relative;">{{ ps.title }}</strong></a>
+                <div class="w3-tiny" style="height:60%;overflow:hidden;position: relative;">{{ ps.keterangan }}</div>
+            </div>
+        </div>
+    {% endif %}
+  {% endfor %}
+    <div class="w3-padding w3-white"></div>
+  <div class="w3-container w3-cell-row">
+    <div class="w3-half w3-padding w3-border-right">
+        {% for post in paginator.posts %}
+            {% if post.jenis == "biasa" %}
+            <div class="w3-row w3-margin-bottom">
+                <div class="w3-container w3-col s4">
+                    <img src="{{ post.gambar }}" alt="{{ post.title }}" style="width:100%">
+                </div>
+                <div class="w3-container w3-col s8" style="padding-left:8px">
+                    <strong>{{ post.title }}</strong><br>
+                    <div class="w3-tiny"><i>{{ site.time | date_to_string }}</i> / <i>{{ post.author }}</i></div>
+                    <div class="w3-text-grey w3-small" >{{ post.keterangan }}</div>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+
+        <!-- paginator -->
+        <div class="w3-container w3-center">
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}" class="w3-text-blue">
+            Previous
+            </a>
+            {% else %}
+            <span class="previous">Previous</span>
+            {% endif %}
+            <span class="page_number ">
+            Page: {{ paginator.page }} of {{ paginator.total_pages }}
+            </span>
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}" class="w3-text-blue">Next</a>
+            {% else %}
+            <span class="next ">Next</span>
+            {% endif %}
+        </div>
+
+    </div>
+    <div class="w3-half w3-padding w3-border-top">
+        <div class="w3-center "><strong>info</strong></div>
+        {% for info in site.posts %}
+            {% if info.jenis == "info" %}
+                {{ info.content }}
+            {% endif %}
+        {% endfor %}
+    </div>
+  </div>
+</div>
