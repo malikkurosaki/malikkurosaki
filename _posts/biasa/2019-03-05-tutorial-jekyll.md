@@ -1,3 +1,9 @@
+---
+layout: "post"
+author: "malik kurosaki"
+jenis: "biasa"
+date: "2019-03-05 23:23"
+permalink: "tutorial-jekyll"
 # jekyll
 
 by : malikkurosaki
