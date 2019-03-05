@@ -10,3 +10,4 @@ jenis: "menu"
 
 - [new post](https://github.com/malikkurosaki/malikkurosaki.github.io/new/master/_posts/biasa) 
 - [edit info](https://github.com/malikkurosaki/malikkurosaki.github.io/edit/master/_posts/info/2019-03-03-info.md)
+- [tambah gambar](https://github.com/malikkurosaki/malikkurosaki.github.io/upload/master/assets/img)
