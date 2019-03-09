@@ -6,7 +6,7 @@ layout: pembungkus
 {% for post in paginator.posts %}
     <div class="w3-container w3-padding">
         <div class="w3-container w3-border">
-            <div class="w3-col s3 w3-padding">
+            <div class="w3-col s3 ">
                 <a href="{{ post.url }}"><img src="{{ post.gambar }}" alt="malik kurosaki {{ post.title }}" style="width:100%"></a>
             </div>
             <div class="w3-cell w3-rest w3-padding w3-border-left">
@@ -18,7 +18,7 @@ layout: pembungkus
                 <div class="w3-tiny"><i >{{ post.description }}</i></div> 
                 <div class="w3-right w3-small w3-text-grey">{{ post.author }} / {{ post.date }}</div>
             </div>
-            <a href="" class=" w3-right editor"><i class="fas fa-pen"></i></a>
+            <a href="{{ st.posturl }}{{ post.jenis }}/{{ post.tanggal }}-{{ post.title | slugify }}.md" class=" w3-right editor"><i class="fas fa-pen"></i></a>
         </div>
     </div>
 {% endfor %}

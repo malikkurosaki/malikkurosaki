@@ -27,6 +27,8 @@ url: "127.0.0.1" # the base hostname & protocol for your site, e.g. http://examp
 collections:
   menus:
     output: true
+  tools:
+    output: true
 
 # Build settings
 markdown: kramdown

@@ -1,10 +1,10 @@
 ---
 layout: "post"
-title: "ini-post-kedua"
-date: "2019-03-07"
+title: "ini post kedua"
+tanggal: "2019-03-07"
 jenis: "biasa"
 author: "malik kurosaki"
-gambar: ""
+gambar: "https://i.ibb.co/JcL2Z5v/books-690219-340.png"
 category: [teknology,cara]
 permalink: /:title
 ---
