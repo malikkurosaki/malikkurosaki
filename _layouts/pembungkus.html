@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include head.html %}
+</head>
+<body class="w3-light-grey">
+    {% include topnav.html %}
+    <div style="padding:2px;background-color: cornflowerblue"></div>
+    <div class="w3-container">
+        <div class="w3-quarter w3-mobile w3-container w3-border-right w3-hide-small">
+            {% include leftnav.html %}
+        </div>
+        <div class="w3-half w3-mobile w3-container ">
+            {{ content }}
+        </div>
+        <div class="w3-quarter w3-mobile w3-container w3-border-left w3-hide-small">
+            {% include rightnav.html %}
+        </div>
+    </div>
+    
+
+    <footer class="w3-container w3-padding w3-blue-grey">
+        {% include footer.html %}
+    </footer>
+
+    <script src="{{ site.url }}/assets/js/malik.js"></script>
+</body>
+</html>
