@@ -1,0 +1,5 @@
+setting:
+  leftnav: "leftnav.html"
+  rightnav: "rightnav.html"
+  footer: "footer.html"
+  includeurl: "https://github.com/malikkurosaki/malikkurosaki.github.io/edit/master/_includes/"
