@@ -5,3 +5,5 @@ setting:
   header: "header.html"
   topnav: "topnav.html"
   includeurl: "https://github.com/malikkurosaki/malikkurosaki.github.io/edit/master/_includes/"
+  pageurl: ""
+  posturl: "https://github.com/malikkurosaki/malikkurosaki.github.io/edit/master/_posts"

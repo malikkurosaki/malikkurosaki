@@ -4,17 +4,17 @@
 <head>
     {% include head.html %}
 </head>
-<body class="w3-light-grey">
+<body class="w3-light-grey w3-container">
     {% include topnav.html %}
     <div style="padding:2px;background-color: cornflowerblue"></div>
     <div class="w3-container">
-        <div class="w3-quarter w3-mobile w3-container w3-border-right w3-hide-small">
+        <div class="w3-quarter w3-mobile w3-container w3-hide-small w3-padding">
             {% include leftnav.html %}
         </div>
-        <div class="w3-half w3-mobile w3-container ">
+        <div class="w3-half w3-mobile w3-container w3-white ">
             {{ content }}
         </div>
-        <div class="w3-quarter w3-mobile w3-container w3-border-left w3-hide-small">
+        <div class="w3-quarter w3-mobile w3-container w3-hide-small w3-padding">
             {% include rightnav.html %}
         </div>
     </div>

@@ -1,4 +1,13 @@
-
-ini leftnaf
+<ul class="w3-ul ">
+    <li class="w3-blue"><i class="fas fa-atlas"></i> OPEN WORLD</li>
+    {% for category in site.categories %}
+        {% capture category_name %}{{ category | first }}{% endcapture %}
+        <li><strong class="category-head">{{ category_name }}</strong>
+        {% for post in site.categories[category_name] %}
+            <div class="w3-small w3-text-grey"><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></div>
+        {% endfor %}
+        </li>
+    {% endfor %}
+</ul>
 
 <a href="{{ st.includeurl }}/{{ st.leftnav }}" class=" w3-right editor"><i class="fas fa-pen"></i></a>

@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2019-03-05
-categories: jekyll update
+categories: [jekyll,update]
 jenis: "biasa"
 description: "ini adalahketeragan"
 author: "malik kurosaki"

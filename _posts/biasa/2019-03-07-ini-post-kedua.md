@@ -5,7 +5,7 @@ date: "2019-03-07"
 jenis: "biasa"
 author: "malik kurosaki"
 gambar: ""
-category: []
+category: [teknology,cara]
 permalink: /:title
 ---
 
