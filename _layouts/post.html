@@ -3,8 +3,14 @@ layout: "pembungkus"
 ---
 {% assign st = site.data.pengaturan["setting"] %}
 <div class="w3-container w3-padding">
-    <h1 class="w3-container w3-center ">{{ page.title }}</h1><hr>
+    <h1 class="w3-container w3-center ">{{ page.title }}</h1>
+    {% assign uri = page.title | slugify %}
+    <div class="fb-share-button w3-right" data-href="https://malikkurosaki.github.io/{{ page.title | slugify }}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmalikkurosaki.github.io%2F{{ uri | escape }}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Bagikan</a></div>
+    <hr>
     {{ content }}
 </div>
 
 <a href="{{ st.posturl }}{{ page.jenis }}/{{ page.tanggal }}-{{ page.title }}.md" class=" w3-right editor"><i class="fas fa-pen"></i></a>
+
+
+<div class="fb-comments" data-href="https://malikkurosaki.github.io/{{ page.title }}" data-width="100%" data-numposts="10"></div>
