@@ -2,4 +2,6 @@ setting:
   leftnav: "leftnav.html"
   rightnav: "rightnav.html"
   footer: "footer.html"
+  header: "header.html"
+  topnav: "topnav.html"
   includeurl: "https://github.com/malikkurosaki/malikkurosaki.github.io/edit/master/_includes/"

@@ -1,4 +1,0 @@
-
-ini leftnaf
-
-<a href="{{ st.includeurl }}/{{ st.leftnav }}" class=" w3-right editor"><i class="fas fa-pen"></i></a>
