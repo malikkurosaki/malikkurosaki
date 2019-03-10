@@ -11,3 +11,8 @@ permalink: /:title
 
 
 ini page kedua
+
+```javascript
+var nama = document.getElementById("nama")
+
+```
