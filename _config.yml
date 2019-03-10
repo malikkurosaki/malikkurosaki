@@ -35,7 +35,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-paginate: 5
+paginate: 20
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

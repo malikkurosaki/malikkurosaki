@@ -10,4 +10,4 @@ permalink: /:title
 ---
 
 
-# {{ page.title }}
+ini page kedua
