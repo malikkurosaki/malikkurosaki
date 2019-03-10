@@ -1,9 +1,30 @@
-<div class="w3-container">
-    <a href="{{ site.web }}">design by : {{ site.pengarang }}</a>
+<div class="w3-container w3-blue-grey w3-cell-row w3-hide-large">
+    <div class="w3-container w3-padding w3-cell">
+            {% for category in site.categories %}
+            {% capture category_name %}{{ category | first }}{% endcapture %}
+            <div class="w3-cell 3-container w3-padding w3-mobile"><strong class="category-head">{{ category_name }}</strong>
+            {% for post in site.categories[category_name] %}
+                <div class="w3-small  w3-hover-text-blue"><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></div>
+            {% endfor %}
+            </div>
+            {% endfor %}
+    </div>
+    <div class="w3-container w3-cell">
+        {% for tl in site.tools %}
+        <div class="w3-container">
+            <a class="w3-hover-text-green" href="{{ tl.url }}">{{ tl.title }}</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="w3-container w3-padding w3-black">
+    <a class="w3-center" href="{{ site.web }}">design by : {{ site.pengarang }}</a>
     <a href="{{ st.includeurl }}/{{ st.footer }}" class=" w3-right editor"><i class="fas fa-pen"></i></a>
+    <div id="edit" class="w3-right w3-padding w3-text-blue">
+        <i class="fas fa-pen"></i>
+    </div>
 </div>
 
-<div id="edit" class="w3-right w3-padding w3-text-blue">
-    <i class="fas fa-pen"></i>
-</div>
+
+
 
