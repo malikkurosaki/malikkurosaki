@@ -12,4 +12,23 @@ permalink: "admin"
 - [edit css](https://github.com/malikkurosaki/malikkurosaki.github.io/edit/master/assets/css/malik.css)
 - [edit js](https://github.com/malikkurosaki/malikkurosaki.github.io/edit/master/assets/js/malik.js)
 
+---
+
+__sniped__
+
+---
+
+```
+---
+layout: ""
+title:  ""
+tanggal:  ""
+categories: []
+jenis: "" # biasa dll
+description: "" # krterangan
+author: "" # pembuat
+gambar: "" 
+permalink: /:title 
+---
+```
 
