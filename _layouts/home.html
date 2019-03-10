@@ -4,12 +4,12 @@ layout: pembungkus
 {% assign st = site.data.pengaturan["setting"] %}
 {% include header.html %}
 {% for post in paginator.posts %}
-    <div class="w3-container w3-padding">
-        <div class="w3-container w3-border">
+    <div class="w3-container" style="padding:2px">
+        <div class="w3-container w3-light-grey">
             <div class="w3-col s3 ">
                 <a href="{{ post.url }}"><img src="{{ post.gambar }}" alt="malik kurosaki {{ post.title }}" style="width:100%"></a>
             </div>
-            <div class="w3-cell w3-rest w3-padding w3-border-left">
+            <div class="w3-cell w3-rest w3-padding ">
                 <a href="{{ post.url }}">
                     <div class="w3-small w3-container">
                         <strong>{{ post.title }}</strong>    
