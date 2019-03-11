@@ -1,0 +1,66 @@
+---
+title: wrapper
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="{{ site.favicon | uri_escape }}"/>
+    <title>{{ site.title }} | {{ page.title }}</title>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
+    <meta property="og:url"           content="{{ site.url | uri_escape }}/{{ page.url | uri_escape }}" />
+    <meta property="og:type"          content="website"/>
+    <meta property="og:title"         content="{{ page.title | uri_escape }}"/>
+    <meta property="og:description"   content="{{ page.content | uri_escape}}"/>
+    <meta property="og:image"         content="{{ page.image | uri_escape }}"/>
+    
+    <style>
+        .w3-container{
+            padding: 0px;
+        }
+    </style>
+    {% seo %}
+</head>
+<body>
+    <!-- facebook sdk -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v3.2"></script>
+    <div class="w3-container ">
+       <header class="w3-container w3-light-grey w3-input w3-cell-row" style="padding-left:8px">
+            <a class="w3-cell" href="{{ site.url }}"><h1><img src="{{ site.url }}/{{ site.icon }}">  {{ site.title }}</h1></a>
+            <nav class="w3-container w3-cell w3-cell-bottom">
+                <div class="w3-container w3-right">
+                    {% for page in site.pages %}
+                        {% if page.type == "menu" %}
+                            <a class="w3-button " href="{{ page.url }}">{{ page.title }}</a>
+                        {% endif %}     
+                    {% endfor %}
+                </div>
+            </nav>
+       </header>
+        {{ content }}
+       <footer class="w3-container w3-padding w3-light-grey w3-input">
+            <div class="w3-ul w3-hide-large" style="margin-bottom:32px">
+                {% for category in site.categories %}
+                    {% capture category_name %}{{ category | first }}{% endcapture %}
+                    <div class="w3-cell w3-container w3-padding w3-mobile"><strong class="category-head">{{ category_name }}</strong>
+                    {% for post in site.categories[category_name] %}
+                        <div class="w3-small "><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></div>
+                    {% endfor %}
+                    </div>
+                {% endfor %}
+                </div>
+            <div class="w3-container">
+                design by <a href="{{ site.url }}">{{ site.author }}</a> - 
+                powered by <a href="" >jekyll | github</a>
+            </div>
+       </footer>
+    </div>
+</body>
+</html>

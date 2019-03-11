@@ -1,0 +1,39 @@
+---
+layout: wrapper
+---
+
+<div class="w3-container w3-content">
+    <div class="w3-container w3-center" style="margin-bottom:32px">
+        <h1>{{ page.title }}</h1>
+        <hr>
+    </div>
+    <div class="w3-container w3-padding w3-row">
+        <aside class="w3-container w3-quarter w3-w3-card w3-padding w3-hide-small">
+        <div class="w3-card w3-container">
+            <div class="w3-blue w3-padding"><i class="fas fa-atlas"></i> OPEN WORLD</div>
+            <ul class="w3-ul ">
+                {% for category in site.categories %}
+                    {% capture category_name %}{{ category | first }}{% endcapture %}
+                    <li><strong class="category-head">{{ category_name }}</strong>
+                        {% for post in site.categories[category_name] %}
+                            <div class="w3-small w3-container"> + <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></div>
+                        {% endfor %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        </aside>
+        <div class="w3-rest w3-container">
+            <div class="w3-container w3-light-grey w3-input w3-padding">
+                <div class="w3-container w3-right">
+                    <div class="fb-share-button" data-href="https://malikkurosaki.github.io/{{ page.url }}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmalikkurosaki.github.io%2F{{ page.url | uri_escape }}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Bagikan</a></div>
+                </div>
+                <div class="" style="margin-bottom:64px">
+                    {{ content }}
+                </div>
+                <div class="fb-comments w3-padding" data-href="https://malikkurosaki.github.io/{{ page.url }}" data-width="100%" data-numposts="10"></div>
+            </div>
+        </div>
+    </div>
+    
+</div>

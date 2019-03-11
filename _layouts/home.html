@@ -1,0 +1,78 @@
+---
+layout: wrapper
+title: home
+---
+
+<section class="w3-container w3-light-grey w3-content w3-panel w3-input " style="height:300px">
+    {% for option in site.options %}
+        {% if option.type == "section" %}
+            {{ option.content }}
+        {% endif %}
+    {% endfor %}
+</section>
+<div class="w3-container w3-panel w3-row" style="margin-bottom:64px">
+   <aside class="w3-container w3-quarter w3-w3-card w3-padding w3-hide-small" style="margin-bottom:64px">
+    <div class="w3-card w3-container">
+        <div class="w3-blue w3-padding"><i class="fas fa-atlas"></i> OPEN WORLD</div>
+        <ul class="w3-ul ">
+            {% for category in site.categories %}
+                {% capture category_name %}{{ category | first }}{% endcapture %}
+                <li><strong class="category-head">{{ category_name }}</strong>
+                {% for post in site.categories[category_name] %}
+                    <div class="w3-container w3-small"> + <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></div>
+                {% endfor %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+   </aside>
+   <article class="w3-container w3-half " style="margin-bottom:64px;">
+        <div class="w3-container " style="padding-right:8px;margin-bottom:16px">
+            <div class="w3-padding w3-input w3-light-grey w3-center">
+                SELAYANG PANDANG
+            </div>
+        </div>
+        <div class="w3-container">
+          {% for post in paginator.posts %}
+            <div class="w3-container " style="margin-bottom:4px">
+              <div class="w3-col s3 w3-container w3-light-blue">
+                <a href="{{ post.url }}"><img class="w3-image" alt="{{ site.author }} {{ post.title }}" src="{{ post.image }}"></a>
+              </div>
+              <div class="w3-container w3-col s9 w3-padding">
+                <div class="w3-container">
+                  <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a>
+                </div>
+                <div class="w3-conteiner">
+                    <div class="w3-container w3-text-grey w3-tiny">
+                        <i>{{ post.author }} / {{ post.tanggal }}</i>
+                    </div>
+                </div>
+                <div class="w3-small w3-text-grey w3-container">
+                    {% if post.content contains "<!-- more -->" %}
+                        {{ post.content | split:"<!-- more -->" | first }}
+                        <div style="text-align:right;">
+                        <a href="{{ post.url }}" > Read More </a>
+                        </div>
+                    {% else %}
+                        {{ post.content }}
+                    {% endif %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+   </article>
+   <div class="w3-quarter w3-container" style="margin-bottom:64px">
+       <div class="w3-padding w3-container w3-input w3-light-grey w3-center">
+           TOOLS
+       </div>
+       <div class="w3-container w3-padding">
+            {% for option in site.options %}
+            {% if option.type == "info" %}
+                {{ option.content }}
+            {% endif %}
+            {% endfor %}
+       </div>
+       
+   </div>
+</div>
