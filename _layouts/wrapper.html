@@ -51,7 +51,7 @@ title: wrapper
                     {% capture category_name %}{{ category | first }}{% endcapture %}
                     <div class="w3-cell w3-container w3-padding w3-mobile"><strong class="category-head">{{ category_name }}</strong>
                     {% for post in site.categories[category_name] %}
-                        <div class="w3-small "><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></div>
+                        <div class="w3-small w3-container"> + <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></div>
                     {% endfor %}
                     </div>
                 {% endfor %}
