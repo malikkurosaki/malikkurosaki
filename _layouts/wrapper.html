@@ -33,12 +33,12 @@ title: wrapper
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v3.2"></script>
     <div class="w3-container ">
        <header class="w3-container w3-light-grey w3-input w3-cell-row" style="padding-left:8px">
-            <a class="w3-cell" href="{{ site.url }}"><h1><img src="{{ site.url }}/{{ site.icon }}">  {{ site.title }}</h1></a>
-            <nav class="w3-container w3-cell w3-cell-bottom">
+            <a class="w3-cell w3-mobile w3-container" href="{{ site.url }}"><h1><img src="{{ site.url }}/{{ site.icon }}">  {{ site.title }}</h1></a>
+            <nav class="w3-container w3-cell w3-cell-bottom  w3-mobile">
                 <div class="w3-container w3-right">
                     {% for page in site.pages %}
                         {% if page.type == "menu" %}
-                            <a class="w3-button " href="{{ page.url }}">{{ page.title }}</a>
+                           + <a class=" " href="{{ page.url }}"> {{ page.title }}</a>
                         {% endif %}     
                     {% endfor %}
                 </div>
