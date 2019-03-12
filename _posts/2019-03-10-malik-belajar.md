@@ -5,6 +5,7 @@ tanggal : "2019-03-11"
 author: "malikkurosaki"
 categories: bali
 image: "https://i.postimg.cc/V5yN9CJm/image.png"
+permalink: /:title
 ---
 penasaran gak sih gimana caranya merubah text ( tulisan menjadi file mp3) , atau bagaimana youtuber kok bisa pakai
 suaranya google map untuk ngomong , kuncinya ada disini sob pake aplikasi android yang uda ada di playstore, tinggal ketik 
