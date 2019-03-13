@@ -4,7 +4,7 @@ title:  "merubah text menjadi mp3"
 tanggal : "2019-03-11"
 author: "malikkurosaki"
 categories: bali
-image: "https://i.postimg.cc/V5yN9CJm/image.png"
+image: "https://i.postimg.cc/6pdDWK8J/1200x630bb.png"
 permalink: /:title
 ---
 penasaran gak sih gimana caranya merubah text ( tulisan menjadi file mp3) , atau bagaimana youtuber kok bisa pakai
@@ -32,3 +32,5 @@ Jika ingin merubahnya menjadi file mp3 , pada kolom nama isikan nama untuk filen
 lau buka file manager cari folder yang namanya `maliktexttomp3`
 
 ![malik kurosaki {{ page.title }}](https://i.postimg.cc/W1XbxqJD/image.png)
+
+nanti lanjutlagi ya .. 

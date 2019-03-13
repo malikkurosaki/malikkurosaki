@@ -4,7 +4,7 @@ title: "kirim puluhan pesan whatsapp sekali klick"
 categories: trick
 tanggal : "2019-03-11"
 author: "malikkurosaki"
-image: "https://i.ibb.co/nLdWn79/pesan-wa.png"
+image: "https://i.postimg.cc/PxGpmmt8/free-easter-mockup-generator-psd-1-3.png"
 permalink: /:title
 ---
 

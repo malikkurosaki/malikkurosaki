@@ -4,7 +4,7 @@ title: "kirim facebook massager sekali klik"
 author: "malik kurosaki"
 tanggal: "2019-02-11"
 categories: trick
-image: "https://i.ibb.co/5vkDzFR/fb-bulk.png"
+image: "https://i.postimg.cc/MKsnsk6w/gettyimages-942667874.jpg"
 permalink: /:title
 ---
 
