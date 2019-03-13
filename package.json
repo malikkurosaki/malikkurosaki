@@ -1,5 +1,5 @@
 {
-  "name": "github-db",
+  "name": "malikkurosaki",
   "version": "1.0.0",
   "description": "\"percobaan\"",
   "main": "index.js",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/malikkurosaki/malikkurosaki.github.io/issues"
   },
-  "homepage": "https://github.com/malikkurosaki/malikkurosaki.github.io#readme"
+  "homepage": "https://github.com/malikkurosaki/malikkurosaki.github.io#readme",
+  "dependencies": {
+    "github-db": "^1.1.3"
+  }
 }

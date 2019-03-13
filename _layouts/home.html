@@ -88,7 +88,7 @@ var options = {
 };
  
 // Require GithubDB
-var GithubDB = require('..').default;
+var GithubDB = require('app.js').default;
 // Initialize it with the options from above.
 var githubDB = new GithubDB(options);
 var personalAccessToken = process.env.TOKEN;
