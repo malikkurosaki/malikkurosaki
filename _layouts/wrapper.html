@@ -33,15 +33,7 @@ title: wrapper
 <body>
     <!-- facebook sdk -->
     <div id="fb-root"></div>
-    <script >
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-        fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v3.2&appId=1150331995115046&autoLogAppEvents=1"></script>
     
     <div class="w3-container ">
        <header class="w3-container w3-light-grey w3-input w3-cell-row" style="padding-left:8px">
@@ -56,19 +48,8 @@ title: wrapper
                 </div>
             </nav>
        </header>
+       <!-- content -->
         {{ content }}
-
-        <!-- facebook chat-->
-        <div class="fb-customerchat w3-padding w3-round w3-blue w3-card w3-right" page_id="{{ page.title }}>"></div>
-        <script>
-            FB.CustomerChat.update({  
-            logged_in_greeting: 'Hello There!',
-            logged_out_greeting: 'Log in to Chat with Us',  
-            ref: 'coupon_15',
-            });
-        </script>
-
-
        <footer class="w3-container w3-padding w3-light-grey w3-input">
             <div class="w3-ul w3-hide-large" style="margin-bottom:32px">
                 {% for category in site.categories %}
