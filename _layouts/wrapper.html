@@ -20,8 +20,12 @@ title: wrapper
     <meta property="og:url"           content="{{ site.url | uri_escape }}/{{ page.url | uri_escape }}" />
     <meta property="og:type"          content="website"/>
     <meta property="og:title"         content="{{ page.title | uri_escape }}"/>
-    {% assign deskripsi = page.content | split:"<!-- more -->" | first %}
-    <meta property="og:description"    content="{{ deskripsi }}" />
+        {% assign deskripsi = page.content | split:"<!-- more -->" | first %}
+        {% if post.content contains "<!-- more -->" %}
+    <meta property="og:description"    content="{{ deskripsi | uri_escape }}" />
+        {% else %}
+    <meta property="og:description"    content="malik kurosaki adalah tempat tips trik tutorial share download semua yang berhubungan dengan perkodingan" />
+        {% endif %}
     <meta property="og:image"         content="{{ page.image | uri_escape }}"/>
     
     <style>
