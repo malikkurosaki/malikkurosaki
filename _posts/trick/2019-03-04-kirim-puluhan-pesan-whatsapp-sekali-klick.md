@@ -5,6 +5,7 @@ categories: trick
 tanggal : "2019-03-11"
 author: "malikkurosaki"
 image: "https://i.postimg.cc/PxGpmmt8/free-easter-mockup-generator-psd-1-3.png"
+video: "https://www.youtube.com/watch?v=x1-DzhrxfO8"
 permalink: /:title
 ---
 

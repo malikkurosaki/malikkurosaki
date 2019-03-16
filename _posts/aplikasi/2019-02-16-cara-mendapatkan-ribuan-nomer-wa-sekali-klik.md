@@ -5,6 +5,7 @@ author: "malik kurosaki"
 tanggal: "2019-03-16"
 categories: ["aplikasi android"]
 image: "https://i.postimg.cc/J7yTHYf6/1538541383-whatsapp-new-means.jpg"
+video: "https://www.youtube.com/watch?v=Z7DdDVvciic"
 permalink: /:title
 ---
 
