@@ -19,11 +19,10 @@ title: wrapper
     <script src="//platform-api.sharethis.com/js/sharethis.js#property=5c87ff169fbe5a0017077bb9&product=inline-share-buttons"></script>    
     {% assign vid = page.video %}
     <meta property="og:url"           content="{{ site.url | uri_escape }}{{ page.url }}" />
-    <meta property="og:type"          content="website"/>
     <meta property="og:title"         content="{{ site.title }} | {{ page.title }}"/>
         {% assign pos = post.content | split:"<!-- more -->" | first %}
         {% if pos.content contains "<!-- more -->" %}
-    <meta property="og:description"    content="{{ pos | uri_escape }}" />
+    <meta property="og:description"    content="{{ pos }}" />
         {% else %}
     <meta property="og:description"    content="{{ 'malik kurosaki adalah tempat tips trik tutorial share download semua yang berhubungan dengan perkodingan' | uri_escape }}" />
         {% endif %}
@@ -39,9 +38,11 @@ title: wrapper
                 <meta property="og:type" content="video">
             {% else %}
                 <meta property="og:image"         content="{{ page.image }}"/>
+                <meta property="og:type"          content="website"/>
             {% endif %}
         {% else %}
             <meta property="og:image"         content="{{ site.icon | uri_escape }}"/>
+            <meta property="og:type"          content="website"/>
         {% endif %}
 
         
