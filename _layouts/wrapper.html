@@ -20,11 +20,11 @@ title: wrapper
     {% assign vid = page.video %}
     <meta property="og:url"           content="{{ site.url | uri_escape }}{{ page.url }}" />
     <meta property="og:title"         content="{{ site.title }} | {{ page.title }}"/>
-        {% assign pos = post.content | split:"<!-- more -->" | first %}
+        {% assign pos = page.content | split:"<!-- more -->" | first %}
         {% if pos.content contains "<!-- more -->" %}
-    <meta property="og:description"    content="{{ pos }}" />
+            <meta property="og:description"    content="{{ pos }}" />
         {% else %}
-    <meta property="og:description"    content="{{ 'malik kurosaki adalah tempat tips trik tutorial share download semua yang berhubungan dengan perkodingan' | uri_escape }}" />
+            <meta property="og:description"    content="malik kurosaki adalah tempat tips trik tutorial share download semua yang berhubungan dengan perkodingan" />
         {% endif %}
 
         {% assign gam = vid | replace: "https://www.youtube.com/watch?v=","https://i1.ytimg.com/vi/" %}
