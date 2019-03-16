@@ -112,3 +112,9 @@ ini adalah potensi besar dalam dunia merketing yang tidak bisa dipandang sebelah
     - ![Imgur](https://i.imgur.com/kLTUaPS.png)
     - pilih file yang sudah anda simpan tadi , setelah itu tinggal run, otomatis akan berjalan dengan sendirinya , 
     selamat mencoba
+
+    __lebih jelasnya langsung totnton aja videonya__
+
+    `jangan lupa subcrib like comment share` biar cepet dapet updetannya
+
+    <iframe width="100%" height="360" src="https://www.youtube.com/embed/x1-DzhrxfO8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

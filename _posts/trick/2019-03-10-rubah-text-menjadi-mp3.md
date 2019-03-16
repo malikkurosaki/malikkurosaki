@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "merubah text menjadi mp3"
+title:  "rubah text menjadi mp3"
 tanggal : "2019-03-11"
 author: "malikkurosaki"
-categories: bali
+categories: "trick"
 image: "https://i.postimg.cc/6pdDWK8J/1200x630bb.png"
 permalink: /:title
 ---

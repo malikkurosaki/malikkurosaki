@@ -155,4 +155,4 @@ makan akan otomatis mengirimkan pesan massager facebook
 
 __lebih lengkapnya tonton aja videonya__
 
-<iframe width="695" height="391" src="https://www.youtube.com/embed/Zz2nD-1j52k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="391" src="https://www.youtube.com/embed/Zz2nD-1j52k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

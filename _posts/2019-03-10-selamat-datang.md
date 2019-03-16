@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "selamat datang"
 tanggal : "2019-03-11"
 author: "malikkurosaki"
-categories: denpasar
+categories: welcome
 image: "https://i.postimg.cc/3xYHDW5J/jekyll-blog.jpg"
 permalink: /:title
 ---
