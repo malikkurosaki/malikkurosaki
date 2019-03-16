@@ -20,7 +20,8 @@ title: wrapper
     <meta property="og:url"           content="{{ site.url | uri_escape }}/{{ page.url | uri_escape }}" />
     <meta property="og:type"          content="website"/>
     <meta property="og:title"         content="{{ page.title | uri_escape }}"/>
-    <meta property="og:description"   content="{{ page.content | uri_escape}}"/>
+    {% assign deskripsi = page.content | split:"<!-- more -->" | first %}
+    <meta property="og:description"    content="{{ deskripsi }}" />
     <meta property="og:image"         content="{{ page.image | uri_escape }}"/>
     
     <style>
