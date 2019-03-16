@@ -5,6 +5,7 @@ author: "malik kurosaki"
 tanggal: "2019-02-11"
 categories: trick
 image: "https://i.postimg.cc/MKsnsk6w/gettyimages-942667874.jpg"
+video: "https://www.youtube.com/watch?v=Zz2nD-1j52k"
 permalink: /:title
 ---
 
