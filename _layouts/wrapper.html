@@ -18,7 +18,7 @@ title: wrapper
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="//platform-api.sharethis.com/js/sharethis.js#property=5c87ff169fbe5a0017077bb9&product=inline-share-buttons"></script>    
     {% assign vid = page.video %}
-    <meta property="og:url"           content="{{ site.url | uri_escape }}/{{ page.url | uri_escape }}" />
+    <meta property="og:url"           content="{{ site.url | uri_escape }}{{ page.url | uri_escape }}" />
     <meta property="og:type"          content="website"/>
     <meta property="og:title"         content="{{ site.title }} | {{ page.title | uri_escape }}"/>
         {% assign pos = post.content | split:"<!-- more -->" | first %}
