@@ -20,8 +20,9 @@ title: wrapper
     {% assign vid = page.video %}
     <meta property="og:url"           content="{{ site.url | uri_escape }}{{ page.url }}" />
     <meta property="og:title"         content="{{ site.title }} | {{ page.title }}"/>
-        {% assign pos = page.content | split:"<!-- more -->" | first %}
-        {% if pos.content contains "<!-- more -->" %}
+        
+        {% if page.content contains "<!-- more -->" %}
+            {% assign pos = page.content | split:"<!-- more -->" | first %}
             <meta property="og:description"    content="{{ pos }}" />
         {% else %}
             <meta property="og:description"    content="malik kurosaki adalah tempat tips trik tutorial share download semua yang berhubungan dengan perkodingan" />
