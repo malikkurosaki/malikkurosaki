@@ -29,24 +29,28 @@ title: wrapper
         {% endif %}
 
         {% assign gam = vid | replace: "https://www.youtube.com/watch?v=","https://i1.ytimg.com/vi/" %}
-        {% if page.video contains "http" %}
-    <meta property="og:image"         content="{{ gam | uri_escape }}/0.jpg"/>
+        {% if page.video contains "http" or page.image contains "http" %}
+            {% if page.video contains "http" %}
+                <meta property="og:image"         content="{{ gam | uri_escape }}/0.jpg"/>
+                {% assign vid = vid | replace: "/watch?","/" %}
+                {% assign vid = vid | replace: "=","/" %}
+                <meta property="og:video" content="{{ vid | uri_escape }}?version=3">
+                <meta property="og:video:type" content="application/x-shockwave-flash">
+                <meta property="og:type" content="video">
+            {% else %}
+                <meta property="og:image"         content="{{ page.image }}"/>
+            {% endif %}
         {% else %}
-    <meta property="og:image"         content="{{ site.icon | uri_escape }}"/>
+            <meta property="og:image"         content="{{ site.icon | uri_escape }}"/>
         {% endif %}
 
-        {% assign vid = vid | replace: "/watch?","/" %}
-        {% assign vid = vid | replace: "=","/" %}
-    <meta property="og:video" content="{{ vid | uri_escape }}?version=3">
-    <meta property="og:video:type" content="application/x-shockwave-flash">
-    <meta property="og:type" content="video">
-
+        
     <style>
         .w3-container{
             padding: 0px;
         }
     </style>
-    {% seo %}
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136231455-1"></script>
     <script>
