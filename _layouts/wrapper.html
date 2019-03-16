@@ -23,6 +23,7 @@ title: wrapper
         
         {% if page.content contains "<!-- more -->" %}
             {% assign pos = page.content | split:"<!-- more -->" | first %}
+            {% assign pos = pos | replace: "<p>","" %}
             <meta property="og:description"    content="{{ pos }}" />
         {% else %}
             <meta property="og:description"    content="malik kurosaki adalah tempat tips trik tutorial share download semua yang berhubungan dengan perkodingan" />
