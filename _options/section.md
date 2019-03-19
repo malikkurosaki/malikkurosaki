@@ -3,6 +3,8 @@ title: section
 type: section
 ---
 
+{{ site.description }}
+
 ## obrall source code
 
 > 
