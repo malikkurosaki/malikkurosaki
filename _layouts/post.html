@@ -1,7 +1,7 @@
 ---
 layout: wrapper
+toc: true
 ---
-
 <div class="w3-container w3-content">
     <div class="w3-container w3-center" style="margin-bottom:32px">
         <h1>{{ page.title }}</h1>
@@ -29,7 +29,7 @@ layout: wrapper
                     <!-- <div class="fb-share-button" data-href="https://malikkurosaki.github.io/{{ page.url }}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmalikkurosaki.github.io%2F{{ page.url | uri_escape }}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Bagikan</a></div> -->
                 </div>
                 <div class="" style="margin-bottom:64px">
-                    {{ content }}
+                    {{ content | toc}}
                 </div>
                 <div class="sharethis-inline-share-buttons"></div>
                 

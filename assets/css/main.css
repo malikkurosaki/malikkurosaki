@@ -24,6 +24,30 @@ body {
   min-height: 100vh;
   flex-direction: column; }
 
+/*
+* toc
+*/
+.section-nav {
+  margin: 5px 0;
+  padding: 10px 30px;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  background-color: rgb(226, 243, 245);
+  position: static;
+  display:table;
+  clear:both;
+}
+
+.section-nav > li{
+  list-style-type: upper-roman;
+}
+.section-nav::before{
+  font-weight: bold;
+  content: "table of content";
+  font-size: 24px;
+}
+
+
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
