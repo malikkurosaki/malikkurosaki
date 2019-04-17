@@ -4,7 +4,7 @@ title:  "cara untuk berkomunikasi antara activity"
 tanggal : "2019-04-17"
 author: "malikkurosaki"
 categories: ["trick","tutorial android studio","global"]
-image: "https://i.postimg.cc/KztZvh3J/android-recyclerview-multiviewholders.jpg"
+image: "https://i.postimg.cc/x1ccHPxH/activity-cover-1024x576.png"
 permalink: /:title
 toc: true
 ---
