@@ -12,3 +12,4 @@ toc: true
 
 {% include_relative catatan/posisi-terakhur-recyclerview.md %}
 {% include_relative catatan/membuat-recyclerview-viewpager.md %}
+{% include_relative catatan/recyclerview-slide-show.md %}
