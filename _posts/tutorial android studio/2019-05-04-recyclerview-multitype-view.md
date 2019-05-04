@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "recycslervie multy view adapter"
+title:  "recyclervie multy view holder adapter"
 tanggal : "2019-05-04"
 author: "malikkurosaki"
 categories: ["global","tutorial android studio"]
