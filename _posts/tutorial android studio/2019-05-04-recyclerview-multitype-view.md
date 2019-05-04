@@ -192,3 +192,110 @@ class VHolder1 extends  RecyclerView.ViewHolder{
 ```
 
 
+## update ya ..  yang atas kurang sip 
+
+``` java
+package dev.malikkurosaki.probussystem;
+
+import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import java.util.List;
+
+public class ChatbotRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+
+    private List<Integer> listCostumers;
+    private LayoutInflater inflater;
+    private View view;
+
+    private static final int TYPE1 = 0;
+    private static final int TYPE2 = 2;
+    private static final int TYPE3 = 4;
+
+
+    ChatbotRecyclerAdapter(Context context, List<Integer> theData){
+        this.listCostumers = theData;
+        this.inflater = LayoutInflater.from(context);
+    }
+
+    @NonNull
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        switch (i){
+            case TYPE1:
+                return new VHolder0(inflater.inflate(R.layout.layout_chatbot_vholder0,viewGroup,false));
+            case TYPE2:
+               return new VHolder1(inflater.inflate(R.layout.layout_chatbot_vholder1,viewGroup,false));
+            case TYPE3:
+                return new VHolder2(inflater.inflate(R.layout.layout_chatbot_vholder2,viewGroup,false));
+        }
+        return null;
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder,int i) {
+
+        int pos = listCostumers.get(i);
+        switch (pos){
+            case TYPE1:
+                VHolder0 vHolder0 = (VHolder0)viewHolder;
+                vHolder0.textMe.setText("apa kabarnya");
+                break;
+            case TYPE2:
+
+                break;
+            case TYPE3:
+
+                break;
+        }
+    }
+
+
+    @Override
+    public int getItemCount() {
+        return listCostumers.size();
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        if (!listCostumers.isEmpty()){
+            return listCostumers.get(position);
+        }
+        return listCostumers.get(position);
+    }
+
+
+    public class VHolder0 extends  RecyclerView.ViewHolder{
+        TextView textMe;
+        VHolder0(@NonNull View itemView) {
+            super(itemView);
+            textMe = itemView.findViewById(R.id.textMe);
+        }
+    }
+    public class VHolder1 extends  RecyclerView.ViewHolder{
+
+        TextView textBot;
+        VHolder1(@NonNull View itemView) {
+            super(itemView);
+            textBot = itemView.findViewById(R.id.textBot);
+        }
+    }
+    public class VHolder2 extends  RecyclerView.ViewHolder{
+
+        VHolder2(@NonNull View itemView) {
+            super(itemView);
+        }
+    }
+
+}
+
+
+```
+
+
+yang ini lebih fungsinya jadi sudah bisa langsung diterapkan
