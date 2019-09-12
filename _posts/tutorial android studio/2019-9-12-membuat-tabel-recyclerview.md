@@ -8,6 +8,8 @@ image: "https://i.postimg.cc/dVwTPZd9/image.png"
 permalink: /:title
 toc: true
 ---
+membuat tabel dengan recyclerview multi type view holder <!-- more -->
+
 
 # membuat tabel recyclerview
 ```java
