@@ -120,3 +120,168 @@ public class ProbusSplashActivity extends AppCompatActivity implements Phis_pane
     }
 }
 ```
+
+
+### fragmentnya
+
+```java
+package probus.malikkurosaki.probussystem;
+
+import android.app.Activity;
+import android.content.Context;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.github.mikephil.charting.components.Legend;
+import com.google.gson.JsonObject;
+
+import java.util.List;
+import java.util.Map;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class Phis_panel extends Fragment{
+
+    @BindView(R.id.arr)
+    TextView arr;
+    @BindView(R.id.arrCon)
+    LinearLayout arrCon;
+    @BindView(R.id.dasArrivalAduld)
+    TextView dasArrivalAduld;
+    @BindView(R.id.dasArrivalChild)
+    TextView dasArrivalChild;
+    @BindView(R.id.inH)
+    TextView inH;
+    @BindView(R.id.inhCon)
+    LinearLayout inhCon;
+    @BindView(R.id.dasInhouseAdult)
+    TextView dasInhouseAdult;
+    @BindView(R.id.dasInhouseChild)
+    TextView dasInhouseChild;
+    @BindView(R.id.depCon)
+    TextView depCon;
+    @BindView(R.id.dep)
+    TextView dep;
+    @BindView(R.id.dasDerpatureAdult)
+    TextView dasDerpatureAdult;
+    @BindView(R.id.dasDerpatureChild)
+    TextView dasDerpatureChild;
+    @BindView(R.id.bok)
+    TextView bok;
+    @BindView(R.id.bokCon)
+    LinearLayout bokCon;
+    @BindView(R.id.dasBookingAdult)
+    TextView dasBookingAdult;
+    @BindView(R.id.dasBookingChild)
+    TextView dasBookingChild;
+
+
+    private Context context;
+    private Activity activity;
+    private String TAG = "tagnya";
+
+    public DariFragmentPanel dariFragmentPanel;
+
+    public Phis_panel (){
+
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        this.context = context;
+        this.activity = (Activity)context;
+        if (context instanceof DariFragmentPanel){
+            dariFragmentPanel = (DariFragmentPanel) context;
+        }else {
+            try {
+                throw new IllegalAccessException("harus implement dari fragmen panel");
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.phis_dashboard_panel,container,false);
+        ButterKnife.bind(this,view);
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+
+        Helper_dashboard_panel dashboard_panel = new Helper_dashboard_panel(context, Helper_tools.urlnya(context));
+
+        dashboard_panel.wadahArrivalNya(dashboard_panel.arrivalNya(), new Helper_dashboard_panel.DapatkanDataPanel() {
+            @Override
+            public void maka(Map<String, Object> datanya) {
+                arr.setText(String.valueOf(datanya.get("total")));
+                dasArrivalAduld.setText(String.valueOf(datanya.get("adult")));
+                dasArrivalChild.setText(String.valueOf(datanya.get("child")));
+
+                arrCon.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dariFragmentPanel.maka("ayu");
+                    }
+                });
+            }
+
+        });
+
+        dashboard_panel.wadahArrivalNya(dashboard_panel.bookingNya(), new Helper_dashboard_panel.DapatkanDataPanel() {
+            @Override
+            public void maka(Map<String, Object> datanya) {
+                bok.setText(String.valueOf(datanya.get("total")));
+                dasBookingAdult.setText(String.valueOf(datanya.get("adult")));
+                dasBookingChild.setText(String.valueOf(datanya.get("child")));
+            }
+        });
+
+        dashboard_panel.wadahArrivalNya(dashboard_panel.depatureNya(), new Helper_dashboard_panel.DapatkanDataPanel() {
+            @Override
+            public void maka(Map<String, Object> datanya) {
+                dep.setText(String.valueOf(datanya.get("total")));
+                dasDerpatureAdult.setText(String.valueOf(datanya.get("adult")));
+                dasDerpatureChild.setText(String.valueOf(datanya.get("child")));
+            }
+        });
+
+        dashboard_panel.wadahArrivalNya(dashboard_panel.inHouseNya(), new Helper_dashboard_panel.DapatkanDataPanel() {
+            @Override
+            public void maka(Map<String, Object> datanya) {
+                inH.setText(String.valueOf(datanya.get("total")));
+                dasInhouseAdult.setText(String.valueOf(datanya.get("adult")));
+                dasInhouseChild.setText(String.valueOf(datanya.get("child")));
+            }
+        });
+
+    }
+
+
+    public void setDariFragmentPanel(DariFragmentPanel dariFragmentPanel) {
+        this.dariFragmentPanel = dariFragmentPanel;
+    }
+
+   interface DariFragmentPanel{
+        void maka(String nama);
+   }
+}
+```
